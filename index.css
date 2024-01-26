@@ -1,0 +1,6 @@
+body {
+    /* background-color: pink; */
+    background-image: url("test.png");
+    background-size: cover;
+    height: 100%;
+}
