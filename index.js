@@ -16,8 +16,8 @@ $(document).ready(function () {
         "slow"
       );
     });
-  $(".oh").click(function () {
-    $(".first").css("display", "none")
-    $(".second").css("display", "block")
-  });
+  // $(".oh").click(function () {
+  //   $(".first").css("display", "none")
+  //   $(".second").css("display", "block")
+  // });
 });
