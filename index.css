@@ -50,6 +50,7 @@
   display: flex;
   flex-direction: column;
   height: 70%;
+  width: 100%
 }
 
 .valentines {
@@ -59,6 +60,7 @@
   margin-left: auto;
   margin-right: auto;
   height: 300px;
+  width: 100%;
 }
 
 @keyframes up {
@@ -97,7 +99,7 @@
   grid-area: 1/1;
   margin-left: auto;
   margin-right: auto;
-  background-color: #eae2b7;
+  background-color: #f2f2f2;
   width: 270px;
   height: 170px;
   z-index: 1;
@@ -337,33 +339,43 @@
 }
 .popup-container {
   width: 100%;
-  height: 70vh;
-  /* background: rgba(0, 0, 0, .3); */
-  display: flex;
-  opacity: 0;
+  height: 60vh;
+  background: white;
+  display: none;
   pointer-events: none;
   z-index: -1;
   margin-left: auto;
   margin-right: auto;
 }
 .popup-container.active {
-  opacity: 1;
+  display: flex;
   pointer-events: auto;
-  transition: 0.4s ease;
+  transition: 10s ease;
 }
 .popup-container .popup-box {
   width: 100%;
-  background: #f2f2f2;
+  background: white;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 50px;
   transform: scale(0);
   flex-direction: column;
   display: flex;
 }
+.popup-container .popup-box:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #003049;
+  border-style: dotted;
+  width: 96%;
+  height: 94%;
+  left: 2%;
+  top: 3%;
+  z-index: -1;
+}
 .popup-container.active .popup-box {
   transform: scale(1);
-  transition: 0.4s ease;
+  transition: 10s ease;
   transition-delay: 0.2s;
 }
 .popup-box h1 {
@@ -399,7 +411,7 @@
 
 .popup-shadow {
   grid-area: 2/1;
-  width: 90%;
+  width: 100%;
   height: 25px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
@@ -408,9 +420,53 @@
   margin-top: 2vh;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
+  display: none;
 }
 
 .popup-shadow.active {
-  opacity: 1;
+  display: block;
 }
+
+/* START OF HEART BUTTON */
+.button{
+	width: 50px;
+	height: 50px;
+  top:50%;
+  position: fixed;
+	left: 50%;
+	margin-top: 15%;
+	margin-left: -50px;
+	border-radius: 5px;
+	background: none;
+	cursor: pointer;
+	transition: background 0.5s ease;
+}
+.active#heart:before,.active#heart:after{
+	background: red !important;
+}
+#heart {
+    width: 100px;
+    height: 90px;
+    transition: background 0.5s ease;
+}
+#heart:before,
+#heart:after {
+	transition: background 0.5s ease;
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: dimgrey;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+/* END HEART BUTTON */
