@@ -10,8 +10,11 @@ const titleText = document.querySelector('.title');
 const envelopeWrapper = document.querySelector('.envelope-wrapper');
 const container = document.querySelector('.container');
 const audio = document.querySelector('audio');
+const valentines = document.querySelector('.valentines');
+const popupShadow = document.querySelector('.popup-shadow');
 showPopup.onclick = () => {
     popupContainer.classList.add('active');
+    popupShadow.classList.add('active');
     front.classList.add('hidden');
     envelope.classList.add('hidden');
     frontLeft.classList.add('hidden');
@@ -20,10 +23,12 @@ showPopup.onclick = () => {
     audio.classList.add('hidden');
     titleText.classList.add('hidden');
     envelopeWrapper.classList.add('hidden');
-    container.style.setProperty("margin-top", "10vh");
+    container.style.setProperty("margin-top", "5vh");
+    valentines.style.setProperty("height", "100%");
 }
 closeBtn.onclick = () => {
     popupContainer.classList.remove('active');
+    popupShadow.classList.remove('active');
     front.classList.remove('hidden');
     envelope.classList.remove('hidden');
     frontLeft.classList.remove('hidden');
@@ -33,6 +38,7 @@ closeBtn.onclick = () => {
     titleText.classList.remove('hidden');
     envelopeWrapper.classList.remove('hidden');
     container.style.setProperty("margin-top", "20vh");
+    valentines.style.setProperty("height", "300px");
 }
 
 $(document).ready(function () {

@@ -58,7 +58,7 @@
   animation: up 3s linear infinite;
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
+  height: 300px;
 }
 
 @keyframes up {
@@ -337,7 +337,7 @@
 }
 .popup-container {
   width: 100%;
-  height: 100%;
+  height: 70vh;
   /* background: rgba(0, 0, 0, .3); */
   display: flex;
   opacity: 0;
@@ -376,9 +376,9 @@
   display: flex;
 }
 .popup-box .close-btn {
-  width: 100%;
+  width: 20%;
   height: 45px;
-  background: #6e78ff;
+  background: #f08080;
   border-radius: 6px;
   border: none;
   outline: none;
@@ -389,8 +389,28 @@
   font-weight: 500;
   margin-top: auto;
   align-self: flex-end;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hidden {
   display: none;
+}
+
+.popup-shadow {
+  grid-area: 2/1;
+  width: 90%;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: scale 3s linear infinite;
+  z-index: -1;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+}
+
+.popup-shadow.active {
+  opacity: 1;
 }
