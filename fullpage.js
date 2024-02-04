@@ -3,13 +3,13 @@ var myFullpage = new fullpage('#fullpage', {
     licenseKey: "gplv3-license",
 	// Navigation
 	menu: '#menu',
-	lockAnchors: false,
+	lockAnchors: true,
 	anchors:['firstPage', 'secondPage'],
-	navigation: false,
+	navigation: true,
 	navigationPosition: 'right',
 	navigationTooltips: ['firstSlide', 'secondSlide'],
 	showActiveTooltip: false,
-	slidesNavigation: false,
+	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
 
 	// Scrolling
@@ -17,7 +17,7 @@ var myFullpage = new fullpage('#fullpage', {
 	scrollingSpeed: 500,
 	autoScrolling: true,
 	fitToSection: true,
-	fitToSectionDelay: 600,
+	fitToSectionDelay: 100,
 	scrollBar: false,
 	easing: 'easeInOutCubic',
 	easingcss3: 'ease',
@@ -33,10 +33,10 @@ var myFullpage = new fullpage('#fullpage', {
 	resetSliders: false,
 	fadingEffect: false,
 	normalScrollElements: '#element1, .element2',
-	scrollOverflow: true,
+	scrollOverflow: false,
 	scrollOverflowMacStyle: false,
 	scrollOverflowReset: false,
-	touchSensitivity: 15,
+	touchSensitivity: 5,
 	bigSectionsDestination: null,
 
 	// Accessibility
@@ -47,11 +47,11 @@ var myFullpage = new fullpage('#fullpage', {
 	// Design
 	controlArrows: true,
 	controlArrowsHTML: [
-		'<div class="fp-arrow"></div>', 
+		'<div class="fp-arrow"></div>',
 		'<div class="fp-arrow"></div>'
 	],
 	verticalCentered: true,
-	sectionsColor : ['#ccc', '#fff'],
+	sectionsColor : ['#000', '#000'],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
