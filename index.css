@@ -20,7 +20,6 @@
   font-weight: bold;
   color: #f08080;
   animation: glow 1.5s ease-in-out infinite alternate;
-  text-decoration: underline;
 }
 
 .first {
@@ -477,7 +476,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 30%;
+  height: 20%;
 }
 
 .selection {
@@ -562,5 +561,14 @@
   .sumikko {
     width: 250px;
     height: 250px;
+  }
+
+  #heart-sumikko {
+    width: 250px;
+    height: 250px;
+  }
+
+  audio {
+    width: 10vw;
   }
 }
