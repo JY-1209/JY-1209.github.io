@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: column;
   height: 70%;
-  width: 100%
+  width: 100%;
 }
 
 .valentines {
@@ -428,52 +428,139 @@
 }
 
 /* START OF HEART BUTTON */
-.button{
-	width: 50px;
-	height: 50px;
-  top:50%;
+.button {
+  width: 50px;
+  height: 50px;
+  top: 50%;
   position: fixed;
-	left: 50%;
-	margin-top: 15%;
-	margin-left: -50px;
-	border-radius: 5px;
-	background: none;
-	cursor: pointer;
-	transition: background 0.5s ease;
+  left: 50%;
+  margin-top: 15%;
+  margin-left: -50px;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition: background 0.5s ease;
 }
-.active#heart:before,.active#heart:after{
-	background: red !important;
+.active#heart:before,
+.active#heart:after {
+  background: red !important;
 }
 #heart {
-    width: 100px;
-    height: 90px;
-    transition: background 0.5s ease;
+  width: 100px;
+  height: 90px;
+  transition: background 0.5s ease;
 }
 #heart:before,
 #heart:after {
-	transition: background 0.5s ease;
-    position: absolute;
-    content: "";
-    left: 50px;
-    top: 0;
-    width: 50px;
-    height: 80px;
-    background: dimgrey;
-    border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
+  transition: background 0.5s ease;
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: dimgrey;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
 }
 #heart:after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin :100% 100%;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }
 
 /* END HEART BUTTON */
+
+.prompt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+}
+
+.selection {
+  display: flex;
+  justify-content: center;
+}
+
+.question {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
+  font-size: 8.5rem;
+  color: #ff7467;
+  font-family: MonteCarlo;
+}
+
+.third {
+  background-image: url("food.png");
+}
+
+.fifth {
+  /* background-image: url("clouds.avif"); */
+  /* background-color: lightpink; */
+  background-color: white;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+}
+
+.no-btn {
+  position: absolute;
+  margin-left: 15vw;
+}
+
+.yes-btn {
+  margin-right: 15vw;
+}
+
+.no-btn,
+.yes-btn {
+  font-family: Pacifico, cursive;
+  font-size: 2rem;
+  width: 6vw;
+  height: 6vh;
+  display: block;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #f8ad9d;
+  color: black;
+}
+
+.sumikko {
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#heart-sumikko {
+  width: 450px;
+  height: 450px;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .title {
     font-size: 40px;
+  }
+
+  .question {
+    font-size: 60px;
+  }
+
+  .no-btn,
+  .yes-btn {
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+  }
+
+  .sumikko {
+    width: 250px;
+    height: 250px;
   }
 }

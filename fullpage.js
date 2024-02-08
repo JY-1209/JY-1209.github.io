@@ -51,7 +51,7 @@ var myFullpage = new fullpage('#fullpage', {
 		'<div class="fp-arrow"></div>'
 	],
 	verticalCentered: true,
-	sectionsColor : ['#000', '#000'],
+	// sectionsColor : ['white', '#000'],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -73,7 +73,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 	lazyLoading: true,
 	observer: true,
-	credits: { enabled: true, label: 'Made with fullPage.js', position: 'right'},
+	credits: { enabled: false},
 
 	// Events
 	beforeLeave: function(origin, destination, direction, trigger){},

@@ -26,20 +26,31 @@ showPopup.onclick = () => {
   container.style.setProperty("margin-top", "0");
   valentines.style.setProperty("height", "100%");
 };
-// closeBtn.onclick = () => {
-// popupContainer.classList.remove('active');
-// popupShadow.classList.remove('active');
-// front.classList.remove('hidden');
-// envelope.classList.remove('hidden');
-// frontLeft.classList.remove('hidden');
-// shadow.classList.remove('hidden');
-// card.classList.remove('hidden');
-// audio.classList.remove('hidden');
-// titleText.classList.remove('hidden');
-// envelopeWrapper.classList.remove('hidden');
-// container.style.setProperty("margin-top", "20vh");
-// valentines.style.setProperty("height", "300px");
-// }
+
+var b = document.querySelector(".no-btn");
+b.addEventListener("click",change);
+function change()
+{
+    var width = window.screen.width - 600;
+    var height = window.screen.height - 600;
+    console.log(width)
+    console.log(height)
+    var i = Math.floor(Math.random()*width)+1;
+    var j = Math.floor(Math.random()*height)+1;
+    b.style.left = i+"px";
+    b.style.top = j+"px";
+}
+
+var c = document.querySelector(".yes-btn");
+c.addEventListener("click",congrats);
+function congrats()
+{
+  var wait = document.querySelector("#wait");
+  var heart = document.querySelector("#heart-sumikko");
+  wait.classList.add("hidden");
+  heart.classList.remove("hidden");
+}
+
 
 $(document).ready(function () {
   $(".envelope-wrapper")
@@ -85,7 +96,7 @@ $(document).ready(function () {
       children: {
         shape: "circle",
         radius: 30,
-        fill: ["red", "white"],
+        fill: ["red", "pink"],
         strokeWidth: 15,
         duration: 500,
       },
