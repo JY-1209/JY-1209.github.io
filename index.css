@@ -555,9 +555,11 @@ h3 {
 
 .chocolate-box {
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 600px;
+  width: 600px;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 0;
 }
 
@@ -568,202 +570,44 @@ h3 {
 }
 
 .chocolate-box:before {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
   background-color: #4b301b;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  box-shadow: 10px 10px #392312;
+  box-shadow: 20px 20px #392312;
 }
 
 .chocolate-box:after {
-  width: 68px;
-  height: 68px;
+  width: 272px;
+  height: 272px;
   background-color: #2b0900;
-  top: 81px;
-  left: 80px;
-  box-shadow: 70px 0 #2b0900, 70px 70px #2b0900, 0px 70px #2b0900;
-}
-
-.chocs {
-  position: absolute;
-  z-index: 1;
-}
-
-.top-left {
-  top: 92px;
-  left: 90px;
-}
-
-.top-left:hover {
-  transform: rotate(25deg);
-}
-
-.top-left:active {
-  opacity: 0;
-}
-
-.bottom-right {
-  left: 162px;
   top: 162px;
-}
-
-.bottom-right:hover {
-  transform: rotate(25deg);
-}
-
-.bottom-right:active {
-  opacity: 0;
-}
-
-.top-left,
-.bottom-right {
-  position: absolute;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: #d12511;
-  box-shadow: 20px 0 #d12511;
-  filter: drop-shadow(2px 2px #ab1503) drop-shadow(-2px 2px #ab1503);
-  transition: 0.2s;
-}
-
-.top-left:after,
-.top-left:before,
-.bottom-right:before,
-.bottom-right:after {
-  content: "";
-  position: absolute;
-}
-
-.top-left:before,
-.bottom-right:before {
-  width: 30px;
-  height: 30px;
-  background-color: #d12511;
-  transform: rotate(-45deg);
-  top: 10px;
-  left: 10px;
-}
-
-.top-left:after,
-.bottom-right:after {
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  width: 10px;
-  height: 10px;
-  top: 5px;
-  left: 35px;
-}
-
-.top-right {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #fee8c0;
-  width: 45px;
-  height: 45px;
-  top: 92px;
-  left: 162px;
-  filter: drop-shadow(2px 2px #ceb587) drop-shadow(-2px 2px #ceb587);
-  overflow: hidden;
-  transition: 0.2s;
-}
-
-.top-right:before,
-.top-right:after {
-  content: "";
-  position: absolute;
-  background-color: #93522b;
-  width: 100px;
-  height: 3px;
-  left: -5px;
-}
-
-.top-right:before {
-  top: 15px;
-  transform: rotate(-35deg);
-  box-shadow: 0 -15px #93522b;
-}
-
-.top-right:after {
-  top: 0;
-  transform: rotate(-15deg);
-  box-shadow: 0 17px #93522b, 0 30px #93522b;
-}
-
-.bottom-left:hover {
-  transform: rotate(25deg);
-}
-
-.bottom-left:active {
-  opacity: 0;
-}
-
-.top-right:hover {
-  transform: rotate(25deg);
-}
-
-.top-right:active {
-  opacity: 0;
-}
-
-.bottom-left {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #503520;
-  width: 45px;
-  height: 45px;
-  top: 162px;
-  left: 92px;
-  filter: drop-shadow(2px 2px #342010) drop-shadow(-2px 2px #342010);
-  overflow: hidden;
-  transition: 0.2s;
-}
-
-.bottom-left:before,
-.bottom-left:after {
-  content: "";
-  position: absolute;
-  background-color: #fde7c7;
-  width: 100px;
-  height: 3px;
-  left: -5px;
-}
-
-.bottom-left:before {
-  top: 15px;
-  transform: rotate(-35deg);
-  box-shadow: 0 -15px #fde7c7;
-}
-
-.bottom-left:after {
-  top: 0;
-  transform: rotate(-15deg);
-  box-shadow: 0 17px #fde7c7, 0 30px #fde7c7;
+  left: 160px;
 }
 
 .box-bottom {
   position: absolute;
   background-color: #392312;
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
   transform: rotate(45deg);
-  left: 222px;
-  top: 73px;
+  left: 444px;
+  top: 146px;
   z-index: -1;
-  box-shadow: 0px 211px #392312;
+  box-shadow: 0px 422px #392312;
 }
 
 .cover {
   position: absolute;
   background-color: #cf2611;
-  width: 150px;
-  height: 150px;
-  border: 5px solid #ae1605;
+  width: 300px;
+  height: 300px;
+  border: 10px solid #ae1605;
   z-index: 2;
-  top: 70px;
-  left: 70px;
+  top: 140px;
+  left: 140px;
   transform-origin: top;
   transition: 0.2s;
   overflow: hidden;
@@ -771,7 +615,7 @@ h3 {
 
 .chocolate-box:hover .cover {
   transform: rotateX(170deg);
-  box-shadow: 5px -5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px -10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .chocolate-box:hover .cover:before {
@@ -783,27 +627,27 @@ h3 {
   content: "Hover Me";
   color: #ffead2;
   font-family: "Brush Script MT", cursive;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 50px;
+  padding-right: 50px;
   font-size: 35px;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   text-align: center;
-  border: 2px double;
+  border: 4px double;
 }
 
 .cover:after {
   position: absolute;
   content: "";
   background-color: #ffead2;
-  height: 10px;
-  width: 100px;
+  height: 20px;
+  width: 200px;
   transform: rotate(-45deg);
-  left: -20px;
-  box-shadow: -5px 165px #ffead2;
+  left: -40px;
+  box-shadow: -10px 330px #ffead2;
 }
 
 #white,
@@ -852,7 +696,7 @@ h3 {
 .second-wrapper {
   display: flex;
   width: 60%;
-  max-height:80%;
+  max-height: 80%;
   margin-right: auto;
   margin-left: auto;
   position: relative;
@@ -865,6 +709,18 @@ h3 {
   background-color: white;
   border: 1px black solid;
   border-radius: 10px;
+}
+
+.silly {
+  object-fit: contain;
+  height: 140px;
+  width: auto;
+  top: 80px;
+  left: 95px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -934,5 +790,91 @@ h3 {
     left: 0px;
     transform: rotate(45deg);
     transform-origin: 100% 100%;
+  }
+
+  .chocolate-box {
+    height: 300px;
+    width: 300px;
+  }
+
+  .chocolate-box:before {
+    width: 160px;
+    height: 160px;
+    background-color: #4b301b;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 10px 10px #392312;
+  }
+
+  .chocolate-box:after {
+    width: 138px;
+    height: 138px;
+    background-color: #2b0900;
+    top: 81px;
+    left: 80px;
+  }
+
+  .box-bottom {
+    position: absolute;
+    background-color: #392312;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    left: 222px;
+    top: 73px;
+    z-index: -1;
+    box-shadow: 0px 211px #392312;
+  }
+
+  .cover {
+    position: absolute;
+    background-color: #cf2611;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #ae1605;
+    z-index: 2;
+    top: 70px;
+    left: 70px;
+    transform-origin: top;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .chocolate-box:hover .cover {
+    transform: rotateX(170deg);
+    box-shadow: 5px -5px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .chocolate-box:hover .cover:before {
+    display: none;
+  }
+
+  .cover:before {
+    position: absolute;
+    content: "Hover Me";
+    color: #ffead2;
+    font-family: "Brush Script MT", cursive;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 35px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    border: 2px double;
+  }
+
+  .cover:after {
+    position: absolute;
+    content: "";
+    background-color: #ffead2;
+    height: 10px;
+    width: 100px;
+    transform: rotate(-45deg);
+    left: -20px;
+    box-shadow: -5px 165px #ffead2;
   }
 }
