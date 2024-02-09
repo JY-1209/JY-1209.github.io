@@ -969,7 +969,7 @@ li:is(:hover, :focus-within) + li + li + li + li + li + li {
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   #heart {
