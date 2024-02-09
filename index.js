@@ -31,8 +31,15 @@ var b = document.querySelector(".no-btn");
 b.addEventListener("click",change);
 function change()
 {
-    var width = window.screen.width - 600;
-    var height = window.screen.height - 600;
+    var width = window.screen.width;
+    var height = window.screen.height;
+    if (width < 600) {
+      width = width - 100;
+      height = height - 200;
+    } else {
+      width = width - 600;
+      height = height - 600;
+    }
     console.log(width)
     console.log(height)
     var i = Math.floor(Math.random()*width)+1;
@@ -154,5 +161,43 @@ $(document).ready(function () {
         button.removeClass("active");
      }, 800);
     }
+  });
+});
+
+// hover on chocolate box to see the flavours.
+
+$(document).ready(function(){
+  $("#top-right").on('mouseenter',function() {
+      $("#white").show();
+  });
+  $("#top-right").on('mouseout',function() {
+      $("#white").hide();
+  });
+});
+
+$(document).ready(function(){
+  $("#bottom-left").on('mouseenter',function() {
+      $("#milk").show();
+  });
+  $("#bottom-left").on('mouseout',function() {
+      $("#milk").hide();
+  });
+});
+
+$(document).ready(function(){
+  $("#bottom-right").on('mouseenter',function() {
+      $("#truffle").show();
+  });
+  $("#bottom-right").on('mouseout',function() {
+      $("#truffle").hide();
+  });
+});
+
+$(document).ready(function(){
+  $("#top-left").on('mouseenter',function() {
+      $("#truffle2").show();
+  });
+  $("#top-left").on('mouseout',function() {
+      $("#truffle2").hide();
   });
 });
