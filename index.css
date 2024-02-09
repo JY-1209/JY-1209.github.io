@@ -713,10 +713,10 @@ h3 {
 
 .silly {
   object-fit: contain;
-  height: 140px;
+  height: 280px;
   width: auto;
-  top: 80px;
-  left: 95px;
+  top: 160px;
+  left: 190px;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -877,4 +877,17 @@ h3 {
     left: -20px;
     box-shadow: -5px 165px #ffead2;
   }
+
+  .silly {
+    object-fit: contain;
+    height: 140px;
+    width: auto;
+    top: 80px;
+    left: 95px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 1;
+  }
+
 }
