@@ -7,7 +7,7 @@ var myFullpage = new fullpage('#fullpage', {
 	anchors:['firstPage', 'secondPage'],
 	navigation: true,
 	navigationPosition: 'right',
-	navigationTooltips: ['firstSlide', 'secondSlide'],
+	navigationTooltips: ['Valentine?', 'ILoveYou', 'Photos', 'Surprise'],
 	showActiveTooltip: false,
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
