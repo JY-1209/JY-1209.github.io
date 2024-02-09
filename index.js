@@ -198,48 +198,28 @@ $(document).ready(function(){
   });
 });
 
-function setCookie(c_name,value,exdays)
-{
-    var exdate=new Date();
-    exdate.setDate(exdate.getDate() + exdays);
-    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-    document.cookie=c_name + "=" + c_value;
+var photos = document.querySelector(".second-wrapper");
+for (let i = -1; i < 26; i++) {
+  let image = document.createElement("IMG");
+  image.classList.add("mySlides")
+  image.setAttribute("src", `photos/${i}.jpg`)
+  photos.appendChild(image);
 }
 
-function getCookie(c_name)
-{
-    var i,x,y,ARRcookies=document.cookie.split(";");
-    for (i=0;i<ARRcookies.length;i++)
-    {
-      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-      x=x.replace(/^\s+|\s+$/g,"");
-      if (x==c_name)
-        {
-        return unescape(y);
-        }
-      }
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
-var song = document.getElementsByTagName('audio')[0];
-var played = false;
-var tillPlayed = getCookie('timePlayed');
-function update()
-{
-    if(!played){
-        if(tillPlayed){
-        song.currentTime = tillPlayed;
-        song.play();
-        played = true;
-        }
-        else {
-                song.play();
-                played = true;
-        }
-    }
-
-    else {
-    setCookie('timePlayed', song.currentTime);
-    }
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
 }
-setInterval(update,1000);
